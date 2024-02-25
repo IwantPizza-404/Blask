@@ -1,0 +1,36 @@
+<script>
+  export default{}
+</script>
+
+<template>
+  <div class="page-wrapp">
+    <Header/>
+    <main class="page-sections">
+      <Hero/>
+      <Services/>
+      <About/>
+    </main>
+  </div>
+</template>
+
+<style>
+  .page-wrapp{
+    display: flex;
+    flex-direction: column;
+  }
+  .page-sections{
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }
+  @media screen and (max-width: 550px){
+    .page-sections{
+      gap: 160px;
+    }
+  }
+  @media screen and (max-width: 425px){
+    .page-sections{
+      gap: 120px;
+    }
+  }
+</style>
