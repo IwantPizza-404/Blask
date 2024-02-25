@@ -92,7 +92,7 @@
   padding: 5px 0;
   font-size: 20px;
   font-weight: 400;
-  transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: .3s ease;
 }
 
 .nav-links.hovered .nav-link a{
@@ -144,7 +144,7 @@
 }
 
 .burger-icon span{
-  transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: .2s ease-in-out;
 }
 
 .burger-icon span:nth-child(1){
