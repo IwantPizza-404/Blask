@@ -154,6 +154,9 @@
     position: absolute;
     /* transform: translate(-200px, 200px); */
     filter: blur(100px);
+    -webkit-filter: blur(100px);
+    transform: scale(1);
+    opacity: 1;
     animation: GrBanana_glow 2.5s ease;
     bottom: 15px;
     left: 0%;
