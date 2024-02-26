@@ -62,6 +62,7 @@
 .header{
   display: flex;
   padding: 20px 0;
+  z-index: 1;
 }
 .header-wrapp{
   display: flex;
@@ -119,10 +120,7 @@
 }
 
 .burger-icon{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   display: block;
   height: 15px;
   width: 30px;
@@ -131,6 +129,8 @@
 .burger-btn{
   position: relative;
   display: none;
+  justify-content: center;
+  align-items: center;
   height: 60px;
   width: 60px;
   padding: 0px;
@@ -145,13 +145,16 @@
 
 .burger-icon span{
   transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  -webkit-transition: .5s cubic-bezier(0.19, 1, 0.22, 1);
+  -ms-transtion: .5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .burger-icon span:nth-child(1){
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(-50%);
   width: 100%;
   height: 2px;
   background: #fff;
@@ -160,22 +163,21 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  transform: translateY(-50%);
   width: 100%;
   height: 2px;
   background: #fff;
 }
 
 .burger-icon.active span:nth-child(1){
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  top: 7px;
+  left: 0;
+  transform: rotate(45deg);
 }
 
 .burger-icon.active span:nth-child(2){
-  transform: translate(-50%, 50%) rotate(-45deg);
-  bottom: 50%;
-  left: 50%;
+  bottom: 6px;
+  left: 0;
+  transform: rotate(-45deg);
 }
 
 
@@ -248,7 +250,7 @@
     height: 60px;
   }
   .burger-btn{
-    display: block;
+    display: flex;
   }
 }
 @media screen and (max-width: 768px){
@@ -263,6 +265,9 @@
     height: 14px;
     width: 28px;
   }
+  .burger-icon.active span:nth-child(1){
+    top: 6px;
+  }
   .nav-link{
     font-size: 25px;
   }
@@ -271,6 +276,12 @@
   .burger-btn{
     width: 48px;
     height: 48px;
+  }
+  .burger-icon.active span:nth-child(1){
+    top: 5px;
+  }
+  .burger-icon.active span:nth-child(2){
+    bottom: 4px;
   }
   .burger-icon{
     width: 22px;
