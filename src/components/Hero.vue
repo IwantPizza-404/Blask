@@ -183,9 +183,9 @@
     top: 65%;
 }
 
-#grBanana path{
+/* #grBanana path{
   animation: GrBanana 9s ease-in-out infinite;
-}
+} */
 
 
 @media screen and (max-width: 1024px){
