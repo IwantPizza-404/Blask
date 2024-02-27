@@ -52,7 +52,7 @@
                 </div>
                 <div class="card-content">
                   <h3 class="card-title">Front-End<br>Development</h3>
-                  <p class="card-subtitle">50 Projects</p>
+                  <p class="card-subtitle">45 Projects</p>
                 </div>
               </div>
             </swiper-slide>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="card-content">
                   <h3 class="card-title">Product<br>Design</h3>
-                  <p class="card-subtitle">6 Projects</p>
+                  <p class="card-subtitle">15 Projects</p>
                 </div>
               </div>
             </swiper-slide>
