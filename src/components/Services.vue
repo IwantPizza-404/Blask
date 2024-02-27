@@ -3,9 +3,15 @@
   import 'swiper/css';
 
   import design_icon from './icons/design_icon.vue'
+  import FE_icon from './icons/FE_icon.vue'
+  import BE_icon from './icons/BE_icon.vue'
+
   export default{
     components: {
       design_icon,
+      FE_icon,
+      BE_icon,
+
       Swiper,
       SwiperSlide
     },
@@ -42,18 +48,18 @@
             <swiper-slide>
               <div class="service-card">
                 <div class="card-icon">
-                  <design_icon/>
+                  <FE_icon/>
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Product<br>Design</h3>
-                  <p class="card-subtitle">6 Projects</p>
+                  <h3 class="card-title">Front-End<br>Development</h3>
+                  <p class="card-subtitle">50 Projects</p>
                 </div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="service-card">
                 <div class="card-icon">
-                  <design_icon/>
+                  <BE_icon/>
                 </div>
                 <div class="card-content">
                   <h3 class="card-title">Product<br>Design</h3>
@@ -168,7 +174,7 @@
       overflow: visible;
     }
   }
-  @media screen and (max-width: 675px) {
+  @media screen and (max-width: 675px){
     .service-card{
       padding: 30px 20px;
       height: 250px;
@@ -179,6 +185,11 @@
     }
     .services_wrapp{
       gap: 75px;
+    }
+  }
+  @media screen and (max-width: 550px){
+    .services_wrapp{
+      gap: 45px;
     }
   }
 </style>

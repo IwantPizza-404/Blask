@@ -159,11 +159,29 @@ export default{
         .feature-card{
             flex-direction: row;
             gap: 15px;
-            padding: 25px 30px;
+            padding: 20px 30px;
         }
         .card-subtitle{
             text-align: left;
             width: min-content;
+        }
+        .sec-tag{
+            font-size: 20px;
+            padding: 7px 18px;
+        }
+        .about_content{
+            gap: 45px;
+        }
+        .about_wrapp{
+            gap: 35px;
+        }
+    }
+    @media screen and (max-width: 420px){
+        .feature-card{
+            padding: 20px 25px;
+        }
+        .card-subtitle{
+            line-height: 110%;
         }
     }
 </style>
