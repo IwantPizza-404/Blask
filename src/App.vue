@@ -9,6 +9,7 @@
       <Hero/>
       <Services/>
       <About/>
+      <Projects/>
     </main>
   </div>
 </template>

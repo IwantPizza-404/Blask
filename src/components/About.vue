@@ -41,9 +41,8 @@ export default{
 </template>
 
 <style scoped>
-    .sec-about{
-        padding: 0 0 100px 0;
-    }
+    /* .sec-about{
+    } */
     .about_wrapp{
         display: flex;
         gap: 50px;
