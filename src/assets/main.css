@@ -42,8 +42,8 @@
 
 @keyframes GrBanana_glow{
   0%{
-    transform: scale(0.6);
-    opacity: 0.4;
+    transform: scale(0.86);
+    opacity: 0.8;
   }
   100%{
     transform: scale(1);
