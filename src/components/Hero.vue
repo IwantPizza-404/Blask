@@ -46,7 +46,7 @@
             <div class="cv-btn">
               <a href="#">
                 <span>Download CV</span>
-                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="40" height="41" viewBox="0 0 40 41" color-interpolation-filters="sRGB" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="1" y="1.5" width="38" height="38" rx="13" stroke="white" stroke-width="2"/>
                   <g clip-path="url(#clip0_59_97)">
                     <path d="M15.7143 19.7857L20 24.0714L24.2857 19.7857" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -163,7 +163,7 @@
     opacity: 1;
     animation: GrBanana_glow 4s ease-out;
     bottom: 15px;
-    left: 0%;
+    left: 0;
 }
 .scroll-btn{
     width: 140px;

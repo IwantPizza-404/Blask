@@ -17,9 +17,9 @@
         this.NavShow =! this.NavShow
         // window.scrollTo(0,0)
         if(this.NavShow == true)
-          document.body.style.overflow = 'hidden'
+          document.body.classList.add('lock')
         else
-          document.body.removeAttribute('style')
+          document.body.classList.remove('lock')
       }
     }
   }

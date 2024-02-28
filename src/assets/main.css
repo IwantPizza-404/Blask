@@ -17,6 +17,10 @@
   color: var(--accent-color);
 }
 
+.lock{
+  overflow: hidden;
+}
+
 
 /* @keyframes GrBanana{
   0%{
