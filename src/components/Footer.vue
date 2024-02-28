@@ -85,6 +85,7 @@ export default{
         border: none;
         height: 65px;
         border-bottom: 2px solid #fff;
+        border-radius: 0;
         outline: none;
         font-size: 24px;
         color: #fff;

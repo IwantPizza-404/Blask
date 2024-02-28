@@ -161,7 +161,7 @@
     -webkit-filter: blur(100px);
     transform: scale(1);
     opacity: 1;
-    animation: GrBanana_glow 4s ease-out;
+    animation: GrBanana_glow 2.5s ease-out;
     bottom: 15px;
     left: 0;
 }
