@@ -15,7 +15,7 @@
     methods:{
       ToggleNav(){
         this.NavShow =! this.NavShow
-        window.scrollTo(0,0)
+        // window.scrollTo(0,0)
         if(this.NavShow == true)
           document.body.style.overflow = 'hidden'
         else

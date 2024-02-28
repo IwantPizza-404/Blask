@@ -54,6 +54,7 @@ export default{
     }
     .footer-title{
         line-height: 130%;
+        font-weight: 500;
     }
     .email-link{
         font-size: 32px;
@@ -141,6 +142,7 @@ export default{
         }
         .send-btn{
             font-size: 25px;
+            height: 60px;
         }
     }
 </style>
