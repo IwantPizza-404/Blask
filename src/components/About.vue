@@ -5,7 +5,7 @@ export default{
 </script>
 
 <template>
-    <div class="sec-about">
+    <section id="about" class="sec-about">
         <div class="container">
             <div class="about_wrapp">
                 <div class="about_content">
@@ -37,7 +37,7 @@ export default{
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>
@@ -113,9 +113,10 @@ export default{
     .about_features::after{
         content: "";
         position: absolute;
-        width: 160px;
-        height: 160px;
-        filter: blur(70px);
+        width: 200px;
+        height: 200px;
+        filter: blur(55px);
+        opacity: 0.5;
         background: linear-gradient(var(--accent-color), #fff);
         top: 50%;
         left: 50%;

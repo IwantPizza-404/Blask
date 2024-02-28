@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <section class="sec-projects">
+  <section id="projects" class="sec-projects">
     <div class="container">
         <div class="projects_wrapp">
             <div class="projects-title">
@@ -76,6 +76,26 @@
                     </a>
                 </div>
             </div>
+            <div class="bg-assets">
+                <svg class="gr-circle-1" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="120" cy="120" r="117" stroke="url(#paint0_linear_74_15)" stroke-width="6"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_74_15" x1="120" y1="0" x2="120" y2="240" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBF52F"/>
+                            <stop offset="1" stop-color="#DBF52F" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <svg class="gr-circle-2" width="391" height="391" viewBox="0 0 391 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="195.5" cy="195.5" r="186.5" stroke="url(#paint0_linear_74_13)" stroke-width="18"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_74_13" x1="206.156" y1="-13.1153" x2="240.584" y2="391" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#DBF52F"/>
+                            <stop offset="1" stop-color="white" stop-opacity="0.1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
         </div>
     </div>  
   </section>
@@ -83,9 +103,10 @@
 
 <style scoped>
     .sec-projects{
-        padding: 0 0 100px 0;
+        overflow-x: clip;
     }
     .projects_wrapp{
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 115px;
@@ -189,6 +210,26 @@
         border: 2px solid #fff;
     }
 
+    .bg-assets{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .bg-assets svg{
+        filter: blur(14px);
+    }
+    .gr-circle-1{
+        position: absolute;
+        left: -80px;
+        top: 130px;
+    }
+    .gr-circle-2{
+        position: absolute;
+        right: -140px;
+        bottom: -140px;
+    }
+
     @media screen and (max-width: 1200px){
         .project-card{
             flex: calc(50% - 10px);
@@ -220,6 +261,13 @@
         .view-pr_btn{
             font-size: 20px;
         }
+        .gr-circle-1{
+            top: 88px;
+        }
+        .gr-circle-2{
+            width: 290px;
+            height: 290px;
+        }
     }
     @media screen and (max-width: 550px){
         .view-pr_btn{
@@ -238,6 +286,9 @@
         .projects_wrapp{
             gap: 45px;
         }
+        .gr-circle-1{
+            top: 62px;
+        }
     }
     @media screen and (max-width: 425px){
         .view-pr_btn{
@@ -249,6 +300,9 @@
         .projects_wrapp{
             position: relative;
             padding-bottom: 85px;
+        }
+        .gr-circle-2{
+            bottom: -100px;
         }
     }
 </style>

@@ -3,17 +3,24 @@
     data(){
       return{
         nav_links:[
-          'Home',
-          'Services',
-          'About',
-          'Projects',
+          {title: 'Home', link: '#'},
+          {title: 'Services', link: '#services'},
+          {title:'About', link: '#about'},
+          {title: 'Projects', link: '#projects'},
         ],
         IsHover: false,
         NavShow: false,
       }
     },
     methods:{
-      
+      ToggleNav(){
+        this.NavShow =! this.NavShow
+        window.scrollTo(0,0)
+        if(this.NavShow == true)
+          document.body.style.overflow = 'hidden'
+        else
+          document.body.removeAttribute('style')
+      }
     }
   }
 </script>
@@ -29,12 +36,13 @@
         </div>
         <nav :class="{'header_nav': true, 'opened': this.NavShow}">
           <ul :class="{'nav-links': true, 'hovered': this.IsHover}">
-            <li v-for="link_title in this.nav_links" class="nav-link">
-              <a href="#" 
+            <li v-for="link in this.nav_links" class="nav-link">
+              <a :href="link.link"
+                v-on="NavShow ? {click: () => ToggleNav()} : {}"
                 @mouseover=" this.IsHover = true" 
                 @mouseleave=" this.IsHover = false"
               >
-                {{link_title}}
+                {{link.title}}
               </a>
             </li>
           </ul>
@@ -47,7 +55,7 @@
             </svg>
           </a>
         </div>
-        <button @click="this.NavShow =! this.NavShow" class="burger-btn">
+        <button @click="ToggleNav()" class="burger-btn">
           <div :class="{'burger-icon': true, 'active': this.NavShow}">
             <span></span>
             <span></span>

@@ -11,6 +11,7 @@
       <About/>
       <Projects/>
     </main>
+    <Footer/>
   </div>
 </template>
 
@@ -23,6 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: 200px;
+    overflow-x: clip;
   }
   @media screen and (max-width: 550px){
     .page-sections{

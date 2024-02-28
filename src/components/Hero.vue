@@ -13,6 +13,9 @@
       }
     },
     methods:{
+      Scroll(){
+        window.scrollTo(0, window.innerHeight + 175)
+      },
       MagnetHover(event){
         this.object = event.target.getBoundingClientRect();
         this.pos.x = Math.round(event.clientX - this.object.left - this.object.width / 2)
@@ -61,6 +64,7 @@
           </div>
           <div class="scroll-btn_wrapp">
             <button 
+              @click="Scroll"
               @mousemove="MagnetHover" 
               @mouseout="MouseOut" 
               class="scroll-btn" 
@@ -154,10 +158,10 @@
     position: absolute;
     /* transform: translate(-200px, 200px); */
     filter: blur(100px);
-    -webkit-filter: blur(100px);
+    /* -webkit-filter: blur(100px); */
     transform: scale(1);
     opacity: 1;
-    animation: GrBanana_glow 2.5s ease;
+    animation: GrBanana_glow 4s ease-out;
     bottom: 15px;
     left: 0%;
 }
@@ -187,6 +191,11 @@
   animation: GrBanana 12s ease-in-out infinite;
 } */
 
+@media screen and (max-width: 1550px){
+  .hero-sec{
+    padding: 100px 0 100px 0;
+  }
+}
 
 @media screen and (max-width: 1024px){
   .hero_content{

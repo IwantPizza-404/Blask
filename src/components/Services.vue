@@ -22,7 +22,7 @@
 </script>
 
 <template>
-  <section class="sec-services">
+  <section id="services" class="sec-services">
     <div class="container">
       <div class="services_wrapp">
         <div class="services-title">
@@ -99,7 +99,7 @@
 <style scoped>
   .sec-services{
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .services_wrapp{
     display: flex;
