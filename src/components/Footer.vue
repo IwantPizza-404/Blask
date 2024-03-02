@@ -108,7 +108,7 @@ export default{
         top: -30px;
         left: -30px;
         z-index: -1;
-        /* filter: blur(60px); */
+        filter: blur(60px);
     }
 
 
