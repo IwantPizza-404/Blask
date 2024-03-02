@@ -11,7 +11,7 @@ export default{
                 <div class="footer-content">
                     <h2 class="footer-title sec-title">Got a project ?<br>Let’s talk</h2>
                     <a class="email-link" href="#">safarov.1513@gmail.com</a>
-                    <!-- <svg class="bg-asset" width="166" height="238" viewBox="0 0 166 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="bg-asset" width="166" height="238" viewBox="0 0 166 238" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M39.9872 1.71834C-14.1114 18.5047 2.35909 141.966 2.35909 141.966C2.35909 141.966 101.33 274.237 149.736 228.313C186.33 193.595 149.736 99.0545 149.736 99.0545C149.736 99.0545 94.6755 -15.251 39.9872 1.71834Z" fill="url(#paint0_linear_90_18)" fill-opacity="0.8"/>
                         <defs>
                             <linearGradient id="paint0_linear_90_18" x1="83" y1="0" x2="83" y2="238" gradientUnits="userSpaceOnUse">
@@ -19,7 +19,7 @@ export default{
                                 <stop offset="1" stop-color="white"/>
                             </linearGradient>
                         </defs>
-                    </svg> -->
+                    </svg>
                 </div>
                 <form class="footer-form">
                     <div class="form-inputs">
@@ -108,7 +108,7 @@ export default{
         top: -30px;
         left: -30px;
         z-index: -1;
-        filter: blur(60px);
+        /* filter: blur(60px); */
     }
 
 
