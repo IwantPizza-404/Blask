@@ -25,7 +25,12 @@
   <section id="services" class="sec-services">
     <div class="container">
       <div class="services_wrapp">
-        <div class="services-title">
+        <div
+          data-aos="sld-top"
+          data-aos-duration="500"
+          data-aos-delay="400"
+          class="services-title"
+        >
           <h2 class="services_title sec-title sec-title_dot">Services</h2>
         </div>
         <div class="services_content">
@@ -35,7 +40,12 @@
             class="service_slider"
           >
             <swiper-slide>
-              <div class="service-card">
+              <div 
+                class="service-card"
+                data-aos="zoom-cst"
+                data-aos-duration="300"
+                data-aos-delay="1000"
+              >
                 <div class="card-icon">
                   <design_icon/>
                 </div>
@@ -46,7 +56,12 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="service-card">
+              <div 
+                class="service-card"
+                data-aos="zoom-cst"
+                data-aos-duration="300"
+                data-aos-delay="1200"
+              >
                 <div class="card-icon">
                   <FE_icon/>
                 </div>
@@ -57,7 +72,12 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="service-card">
+              <div 
+                class="service-card"
+                data-aos="zoom-cst"
+                data-aos-duration="300"
+                data-aos-delay="1400"
+              >
                 <div class="card-icon">
                   <BE_icon/>
                 </div>
@@ -68,7 +88,12 @@
               </div>
             </swiper-slide>
             <swiper-slide>
-              <div class="service-card">
+              <div 
+                class="service-card"
+                data-aos="zoom-cst"
+                data-aos-duration="300"
+                data-aos-delay="1600"
+              >
                 <div class="card-icon">
                   <design_icon/>
                 </div>
@@ -82,16 +107,24 @@
         </div>
       </div>      
     </div>
-    <div class="bg-assets">
-      <svg width="1920" height="298" viewBox="0 0 1920 298" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M-10 290.735C-10 290.735 247.386 41.1184 468.239 13.4865C707.889 -16.4972 811.139 208.74 1052.75 196.353C1260.69 185.691 1337.4 -3.9654 1544.75 13.4865C1714.58 27.78 1930 196.353 1930 196.353" stroke="url(#paint0_linear_32_205)" stroke-width="20"/>
-        <defs>
-          <linearGradient id="paint0_linear_32_205" x1="170.5" y1="26.5482" x2="1880.63" y2="269.597" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#DBF52F" stop-opacity="0.7"/>
-            <stop offset="1" stop-color="#F4FFAD" stop-opacity="0.5"/>
-          </linearGradient>
-        </defs>
-      </svg>
+    <div 
+      class="bg-assets"
+    >
+      <div
+        data-aos="spread" 
+        data-aos-duration="1500" 
+        data-aos-delay="400"
+      >
+        <svg width="1920" height="298" viewBox="0 0 1920 298" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-10 290.735C-10 290.735 247.386 41.1184 468.239 13.4865C707.889 -16.4972 811.139 208.74 1052.75 196.353C1260.69 185.691 1337.4 -3.9654 1544.75 13.4865C1714.58 27.78 1930 196.353 1930 196.353" stroke="url(#paint0_linear_32_205)" stroke-width="20"/>
+          <defs>
+            <linearGradient id="paint0_linear_32_205" x1="170.5" y1="26.5482" x2="1880.63" y2="269.597" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#DBF52F" stop-opacity="0.7"/>
+              <stop offset="1" stop-color="#F4FFAD" stop-opacity="0.5"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
     </div>
   </section>  
 </template>
@@ -162,6 +195,37 @@
   .swiper-slide{
     transition: .3s ease;
     max-width: calc(25% - 15px);
+  }
+
+  [data-aos='spread'] {
+    clip-path: inset(0 100% 0  0);
+    transition-property: clip-path;
+  }
+
+  [data-aos='spread'].aos-animate {
+    clip-path: inset(0);
+  }
+
+  [data-aos='sld-top'] {
+    transform: translateY(-10%);
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+
+  [data-aos='sld-top'].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  [data-aos='zoom-cst'] {
+    transform: scale(0.98);
+    opacity: 0;
+    transition-property: transform, opacity;
+  }
+
+  [data-aos='zoom-cst'].aos-animate {
+    transform: scale(1);
+    opacity: 1;
   }
 
   @media screen and (max-width: 1290px){

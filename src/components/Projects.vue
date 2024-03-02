@@ -12,8 +12,19 @@
     <div class="container">
         <div class="projects_wrapp">
             <div class="projects-title">
-                <h2 class="projects_title sec-title sec-title_dot">Projects</h2>
-                <a class="view-pr_btn" href="#">
+                <h2 
+                    class="projects_title sec-title sec-title_dot"
+                    data-aos="sld-right"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >Projects</h2>
+                <a 
+                    class="view-pr_btn"
+                    href="#"
+                    data-aos="fade"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >
                     <span>View all</span>
                     <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 6.5C0.447715 6.5 0 6.94772 0 7.5C0 8.05228 0.447715 8.5 1 8.5V6.5ZM21.7071 8.20711C22.0976 7.81658 22.0976 7.18342 21.7071 6.79289L15.3431 0.428932C14.9526 0.0384078 14.3195 0.0384078 13.9289 0.428932C13.5384 0.819457 13.5384 1.45262 13.9289 1.84315L19.5858 7.5L13.9289 13.1569C13.5384 13.5474 13.5384 14.1805 13.9289 14.5711C14.3195 14.9616 14.9526 14.9616 15.3431 14.5711L21.7071 8.20711ZM1 8.5L21 8.5V6.5L1 6.5V8.5Z" fill="white"/>
@@ -21,7 +32,12 @@
                 </a>
             </div>
             <div class="projects_content">
-                <div class="project-card">
+                <div 
+                    class="project-card"
+                    data-aos="sld-bottom"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >
                     <a href="https://blobla-production.up.railway.app" class="card-wrapp">
                         <div class="card-header">
                             <div class="card-tag">Back-end</div>
@@ -39,7 +55,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-card">
+                <div 
+                    class="project-card"
+                    data-aos="sld-bottom"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >
                     <a href="#" class="card-wrapp">
                         <div class="card-header">
                             <div class="card-tag">Full-stack</div>
@@ -57,7 +78,12 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-card">
+                <div 
+                    class="project-card"
+                    data-aos="sld-bottom"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >
                     <a href="#" class="card-wrapp">
                         <div class="card-header">
                             <div class="card-tag">Front-end</div>
@@ -230,6 +256,28 @@
         bottom: -140px;
     }
 
+    [data-aos='sld-right'] {
+        transform: translateX(-5%);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='sld-right'].aos-animate {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    [data-aos='sld-bottom'] {
+        transform: translateY(5%);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='sld-bottom'].aos-animate {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
     @media screen and (max-width: 1200px){
         .project-card{
             flex: calc(50% - 10px);
@@ -295,7 +343,7 @@
             position: absolute;
             bottom: 0;
             left: 50%;
-            transform: translate(-50%);
+            transform: translate(-50%) !important;
         }
         .projects_wrapp{
             position: relative;

@@ -33,13 +33,20 @@
 <template>
   <div class="hero-sec">
     <div class="container">
-      <div class="hero_wrapp">
+      <div class="hero_wrapp" data-aos="fade" data-aos-duration="1000" data-aos-delay="0">
         <div class="hero_content">
           <div class="hero_context">
-            <h1 class="hero-title">Hi, I’m Yusuf Safarov!</h1>
-            <p class="hero-subtitle">I’ve been working as a <b>Front-End</b> developer for 4 years.</p>
+            <h1
+              data-aos="sld-top"
+              data-aos-duration="500"
+              data-aos-delay="500"
+              class="hero-title"
+            >
+              Hi, I’m Yusuf Safarov!
+            </h1>
+            <p class="hero-subtitle" data-aos="sld-top" data-aos-duration="400" data-aos-delay="1000">I’ve been working as a <b>Front-End</b> developer for 4 years.</p>
           </div>
-          <div class="hero-btns">
+          <div class="hero-btns" data-aos="fade" data-aos-duration="500" data-aos-delay="1000">
             <div class="contact-btn">
               <a href="#">Let’s Talk</a>
             </div>
@@ -63,17 +70,23 @@
             </div>
           </div>
           <div class="scroll-btn_wrapp">
-            <button 
-              @click="Scroll"
-              @mousemove="MagnetHover" 
-              @mouseout="MouseOut" 
-              class="scroll-btn" 
-              ref="scrollbtn"
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="300"
+              data-aos-delay="1300"
             >
-              <svg width="20" height="52" viewBox="0 0 20 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.11612 50.8839C9.60427 51.372 10.3957 51.372 10.8839 50.8839L18.8388 42.9289C19.327 42.4408 19.327 41.6493 18.8388 41.1612C18.3507 40.673 17.5592 40.673 17.0711 41.1612L10 48.2322L2.92893 41.1612C2.44078 40.673 1.64932 40.673 1.16117 41.1612C0.67301 41.6493 0.67301 42.4408 1.16117 42.9289L9.11612 50.8839ZM8.75 0L8.75 50H11.25L11.25 0L8.75 0Z" fill="white"/>
-              </svg>
-            </button>
+              <button 
+                @click="Scroll"
+                @mousemove="MagnetHover" 
+                @mouseout="MouseOut" 
+                class="scroll-btn" 
+                ref="scrollbtn"
+              >
+                <svg width="20" height="52" viewBox="0 0 20 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.11612 50.8839C9.60427 51.372 10.3957 51.372 10.8839 50.8839L18.8388 42.9289C19.327 42.4408 19.327 41.6493 18.8388 41.1612C18.3507 40.673 17.5592 40.673 17.0711 41.1612L10 48.2322L2.92893 41.1612C2.44078 40.673 1.64932 40.673 1.16117 41.1612C0.67301 41.6493 0.67301 42.4408 1.16117 42.9289L9.11612 50.8839ZM8.75 0L8.75 50H11.25L11.25 0L8.75 0Z" fill="white"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <div class="gr-banana">
@@ -190,6 +203,40 @@
 /* #grBanana path{
   animation: GrBanana 12s ease-in-out infinite;
 } */
+
+
+[data-aos='sld-right'] {
+  transform: translateX(-5%);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='sld-right'].aos-animate {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+[data-aos='sld-top'] {
+  transform: translateY(10%);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='sld-top'].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+[data-aos='zoom-cus']{
+  transform: scale(0);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos='zoom-cus'].aos-animate{
+  transform: scale(0.3);
+  opacity: 1;
+}
 
 @media screen and (max-width: 1550px){
   .hero-sec{

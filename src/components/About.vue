@@ -8,7 +8,12 @@ export default{
     <section id="about" class="sec-about">
         <div class="container">
             <div class="about_wrapp">
-                <div class="about_content">
+                <div 
+                    class="about_content"
+                    data-aos="sld-right"
+                    data-aos-duration="300"
+                    data-aos-delay="400"
+                >
                     <div class="about-title">
                         <div class="sec-tag sec-title_dot">About</div>
                         <h2 class="about_title sec-title">The reasons working with me...</h2>
@@ -18,19 +23,39 @@ export default{
                     </div>
                 </div>
                 <div class="about_features">
-                    <div class="feature-card">
+                    <div
+                        class="feature-card"
+                        data-aos="zoom-cus"
+                        data-aos-duration="300"
+                        data-aos-delay="700"
+                    >
                         <h3 class="card-title feature-plus">04</h3>
                         <h4 class="card-subtitle">Years of experience</h4>
                     </div>
-                    <div class="feature-card">
+                    <div 
+                        class="feature-card"
+                        data-aos="zoom-cus"
+                        data-aos-duration="300"
+                        data-aos-delay="700"
+                    >
                         <h3 class="card-title feature-plus">50</h3>
                         <h4 class="card-subtitle">Completed projects</h4>
                     </div>
-                    <div class="feature-card">
+                    <div 
+                        class="feature-card"
+                        data-aos="zoom-cus"
+                        data-aos-duration="300"
+                        data-aos-delay="700"
+                    >
                         <h3 class="card-title feature-plus">70</h3>
                         <h4 class="card-subtitle">Satisfied customers</h4>
                     </div>
-                    <div class="feature-card">
+                    <div 
+                        class="feature-card"
+                        data-aos="zoom-cus"
+                        data-aos-duration="300"
+                        data-aos-delay="700"
+                    >
                         <h3 class="card-title feature-plus">04</h3>
                         <h4 class="card-subtitle">Years of experience</h4>
                     </div>
@@ -124,6 +149,29 @@ export default{
         z-index: -1;
         border-radius: 50%;
     }
+
+    [data-aos='sld-right'] {
+        transform: translateX(-5%);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='sld-right'].aos-animate {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    [data-aos='zoom-cus']{
+        transform: scale(0.95);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='zoom-cus'].aos-animate{
+        transform: scale(1);
+        opacity: 1;
+    }
+
 
     @media screen and (max-width: 1150px){
         .about_wrapp{
