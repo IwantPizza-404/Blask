@@ -8,8 +8,12 @@ import Footer from './components/Footer.vue'
 
 import { createApp, ref } from 'vue'
 import App from './App.vue'
+import axios from 'axios'
 
 const app = createApp(App)
+
+app.config.globalProperties.$axios = axios
+
 
 app.component('Header', Header)
 app.component('Hero', Hero)

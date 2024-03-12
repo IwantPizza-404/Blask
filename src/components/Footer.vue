@@ -1,6 +1,35 @@
 <script>
 export default{
+    data(){
+        return {
+            email: '',
+            message: '',
+            submittedMessage: null,
+            IsMessaged: sessionStorage.getItem('IsMessaged') === 'true',
+        };
+    },
+    methods:{
+        async submitMessage() {
+            try{
+                const response = await this.$axios.post('http://localhost:3000/api/messages', {
+                    email: this.email,
+                    message: this.message,
+                });
 
+                if (response.status === 200) {
+                    this.submittedMessage = response.data;
+                    sessionStorage.setItem('IsMessaged', 'true');
+                    this.IsMessaged = true;
+                } 
+                else {
+                    console.error('Error submitting message:', response.statusText);
+                }
+            } 
+            catch(error){
+                console.error('Error submitting message:', error);
+            }
+        },
+    }
 }
 </script>
 
@@ -20,7 +49,7 @@ export default{
                         data-aos-duration="500"
                         data-aos-delay="400"
                     >
-                        <a class="email-link" href="#">
+                        <a class="email-link" href="mailto: safarov.1513@gmail.com">
                             <span class="email-content"></span>
                             <svg width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="1" y="1.76782" width="28.6066" height="28.6066" rx="9" stroke="white" stroke-width="2"/>
@@ -46,16 +75,43 @@ export default{
                     </div>
                 </div>
                 <form 
+                    @submit.prevent="submitMessage"
                     class="footer-form"
                     data-aos="fade"
                     data-aos-duration="500"
                     data-aos-delay="600"
                 >
-                    <div class="form-inputs">
-                        <input class="form_input" type="text" name="email" placeholder="E-mail">
-                        <input class="form_input" type="text" placeholder="Message">
+                    <div v-if="IsMessaged" class="form_state">
+                        <div class="state_icon">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="48.75" stroke="white" stroke-width="2.5"/>
+                                <path d="M26.1802 51.8198L41.7365 67.3762L73.5563 35.5563" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="state_title">Your message has been sent successfully!</h3>
                     </div>
-                    <button class="send-btn">Send</button>
+                    <div v-if="!IsMessaged" class="form_content">
+                        <div class="form-inputs">
+                            <input 
+                                v-model="email"
+                                id="email" 
+                                class="form_input" 
+                                type="email" 
+                                name="email" 
+                                placeholder="E-mail"
+                                required
+                            >   
+                            <input 
+                                v-model="message"
+                                id="message" 
+                                class="form_input" 
+                                type="text" 
+                                placeholder="Message"
+                                required
+                            >
+                        </div>
+                        <button type="submit" class="send-btn">Send</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -104,10 +160,37 @@ export default{
     .footer-form{
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 50px;
         flex: 1;
         max-width: 500px;
+    }
+
+    .form_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .form_state{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height: 280px;
+        animation: fade .5s ease-out;
+    }
+
+    .state_icon svg path{
+        animation: check .7s ease-in-out;
+    }
+
+    .state_title{
+        font-size: 30px;
+        line-height: 110%;
+        text-align: center;
+        max-width: 500px;
+        width: fit-content;
     }
 
     .form-inputs{
@@ -172,6 +255,24 @@ export default{
         opacity: 1;
     }
 
+    @keyframes check {
+        0%{
+            clip-path: inset(0 100% 0  0);
+        }
+        100%{
+            clip-path: inset(0);
+        }
+    }
+
+    @keyframes fade {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
     @media screen and (max-width: 1135px){
         .footer_wrapp{
             flex-direction: column;
@@ -212,6 +313,14 @@ export default{
             font-size: 25px;
             height: 60px;
         }
+        .state_title{
+            font-size: 26px;
+            max-width: 400px;
+        }
+        .state_icon svg{
+            width: 90px;
+            height: 90px;
+        }
     }
     @media screen and (max-width: 550px){
         .form_input{
@@ -221,6 +330,17 @@ export default{
         .send-btn{
             height: 58px;
             font-size: 24px;
+        }
+        .form_state{
+            gap: 15px;
+        }
+        .state_title{
+            font-size: 24px;
+            max-width: 400px;
+        }
+        .state_icon svg{
+            width: 75px;
+            height: 75px;
         }
     }
 </style>

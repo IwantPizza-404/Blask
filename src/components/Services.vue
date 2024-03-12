@@ -82,7 +82,7 @@
                   <BE_icon/>
                 </div>
                 <div class="card-content">
-                  <h3 class="card-title">Product<br>Design</h3>
+                  <h3 class="card-title">Back-End<br>Development</h3>
                   <p class="card-subtitle">15 Projects</p>
                 </div>
               </div>

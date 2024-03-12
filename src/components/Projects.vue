@@ -102,7 +102,12 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-assets">
+            <div 
+                data-aos="zoom-cst"
+                data-aos-duration="400"
+                data-aos-delay="700"
+                class="bg-assets"
+            >
                 <svg class="gr-circle-1" width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="120" cy="120" r="117" stroke="url(#paint0_linear_74_15)" stroke-width="6"/>
                     <defs>
@@ -275,6 +280,17 @@
 
     [data-aos='sld-bottom'].aos-animate {
         transform: translateY(0);
+        opacity: 1;
+    }
+
+    [data-aos='zoom-cst'] {
+        transform: scale(0.98);
+        opacity: 0;
+        transition-property: transform, opacity;
+    }
+
+    [data-aos='zoom-cst'].aos-animate {
+        transform: scale(1);
         opacity: 1;
     }
 
